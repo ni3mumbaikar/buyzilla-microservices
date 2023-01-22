@@ -12,7 +12,7 @@
 	<artifactId>buyzilla-services</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>BuyzillaServices</name>
+	<name>buyzilla-services</name>
 	<description>Base Service for Buyzilla eureka clients</description>
 	<properties>
 		<java.version>17</java.version>
@@ -96,6 +96,7 @@
 
 	<modules>
 		<module>../product-service</module>
+		<module>../supplier-service</module>
 <!--		<module>location/of/module2</module>-->
 <!--		<module>location/of/module3</module>-->
 	</modules>

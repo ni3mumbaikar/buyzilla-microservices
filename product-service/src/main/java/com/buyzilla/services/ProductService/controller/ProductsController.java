@@ -2,9 +2,6 @@ package com.buyzilla.services.ProductService.controller;
 
 
 import com.buyzilla.services.ProductService.entity.Product;
-import com.buyzilla.services.ProductService.exceptions.ProductAlreadyExistException;
-import com.buyzilla.services.ProductService.exceptions.ProductNotFoundException;
-import com.buyzilla.services.ProductService.exceptions.SupplierNotFoundException;
 import com.buyzilla.services.ProductService.service.ProductService;
 import com.buyzilla.services.ProductService.util.ValidList;
 import com.buyzilla.services.ProductService.vo.ProductVo;
@@ -30,19 +27,19 @@ public class ProductsController {
     }
 
     @GetMapping("/{pid}")
-    ResponseEntity<Product> getProductByPid(@PathVariable Integer pid) throws ProductNotFoundException {
+    ResponseEntity<Product> getProductByPid(@PathVariable Integer pid) {
         return ResponseEntity.ok(productService.getProductByPid(pid));
     }
 
     @PostMapping
-    ResponseEntity<String> saveProducts(@RequestBody @Valid ValidList<ProductVo> productVos) throws ProductAlreadyExistException, SupplierNotFoundException {
+    ResponseEntity<String> saveProducts(@RequestBody @Valid ValidList<ProductVo> productVos) {
         productVos.forEach(System.out::println);
         productService.saveProducts(productVos);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @PutMapping
-    ResponseEntity<String> updateProducts(@RequestBody @Valid ValidList<ProductVo> productVos) throws ProductNotFoundException, SupplierNotFoundException {
+    ResponseEntity<String> updateProducts(@RequestBody @Valid ValidList<ProductVo> productVos) {
         productService.updateProducts(productVos);
         return new ResponseEntity<>(HttpStatus.OK);
     }

@@ -1,4 +1,4 @@
-package com.buyzilla.services.ProductService.exceptions;
+package com.buyzilla.services.ProductService.exception;
 
 public class ProductAlreadyExistException extends RuntimeException {
     public ProductAlreadyExistException(String message) {

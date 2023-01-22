@@ -1,7 +1,7 @@
-package com.buyzilla.services.ProductService.repository;
+package com.buyzilla.services.supplierservice.repository;
 
 
-import com.buyzilla.services.ProductService.entity.Supplier;
+import com.buyzilla.services.supplierservice.entity.Supplier;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface SuppliersRepository extends JpaRepository<Supplier,Integer> {

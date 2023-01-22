@@ -1,4 +1,4 @@
-package com.buyzilla.services.ProductService.exceptions;
+package com.buyzilla.services.supplierservice.exception;
 
 public class SupplierNotFoundException extends RuntimeException{
     public SupplierNotFoundException(String message) {

@@ -18,7 +18,7 @@ public class BuyzillaApiGatewayApplication {
 		return builder.routes()
 				.route(p -> p
 						.path("/api/v1/products")
-						.uri("http://localhost:2030/api/v1/products")
+						.uri("http://localhost:2032/api/v1/products")
 				).route(p -> p
 				.path("/api/v1/suppliers")
 				.uri("http://localhost:2031/api/v1/suppliers")

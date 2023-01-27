@@ -1,0 +1,30 @@
+server:
+  port: 2031
+eureka:
+  server:
+    port : 1648
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.server.port}/eureka/
+  instance:
+    hostname: localhost
+    preferIpAddress: true
+
+spring:
+  application:
+    name: buyzilla-supplier-service
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: system
+    password: systems
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+        dialect: org.hibernate.dialect.OracleDialect
+
+    hibernate:
+      ddl-auto: update

@@ -1,0 +1,16 @@
+server:
+  port: 1648
+eureka:
+  server:
+    waitTimeInMsWhenSyncEmpty : 0
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+spring:
+  application:
+    name: buyzilla-discovery-service

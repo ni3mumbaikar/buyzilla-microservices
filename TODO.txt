@@ -1,0 +1,1 @@
+Service Down Exception in Gateway

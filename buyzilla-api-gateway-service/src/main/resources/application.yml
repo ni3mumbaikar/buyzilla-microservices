@@ -1,0 +1,17 @@
+server:
+  port: 2040
+eureka:
+  server:
+    port : 1648
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.server.port}/eureka/
+  instance:
+    hostname: localhost
+    preferIpAddress: true
+
+spring:
+  application:
+    name: buyzilla-api-gateway-service

@@ -12,6 +12,28 @@ eureka:
     hostname: localhost
     preferIpAddress: true
 
+buyzilla:
+  route : api
+  api_version: v1
+
 spring:
   application:
     name: buyzilla-api-gateway-service
+  cloud:
+    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+      routes:
+        - id:  buyzilla-product-service
+          predicates:
+            - Path=/api/v1/products/**
+          uri: lb://buyzilla-product-service
+        - id: buyzilla-shipper-service
+          predicates:
+            - Path=/api/v1/shippers/**
+          uri: lb://buyzilla-shipper-service
+        - id: buyzilla-supplier-service
+          predicates:
+            - Path=/api/v1/suppliers/**
+          uri: lb://buyzilla-supplier-service

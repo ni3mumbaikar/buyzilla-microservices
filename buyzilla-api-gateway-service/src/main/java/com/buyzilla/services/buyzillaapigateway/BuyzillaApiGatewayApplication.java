@@ -8,22 +8,8 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class BuyzillaApiGatewayApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(BuyzillaApiGatewayApplication.class, args);
-	}
-
-	@Bean
-	public RouteLocator myRoutes(RouteLocatorBuilder builder) {
-
-		return builder.routes()
-				.route(p -> p
-						.path("/api/v1/products")
-						.uri("http://localhost:2032/api/v1/products")
-				).route(p -> p
-				.path("/api/v1/suppliers")
-				.uri("http://localhost:2031/api/v1/suppliers")
-		)
-				.build();
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(BuyzillaApiGatewayApplication.class, args);
+    }
 
 }

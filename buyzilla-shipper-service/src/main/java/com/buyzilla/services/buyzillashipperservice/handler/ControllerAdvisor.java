@@ -1,13 +1,15 @@
-package com.buyzilla.services.supplierservice.handler;
-
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.MethodArgumentNotValidException;
-import org.springframework.web.bind.annotation.ControllerAdvice;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-
-@ControllerAdvice
-public class ControllerAdvisor {
+//package com.buyzilla.services.buyzillashipperservice.handler;
+//
+//import org.springframework.http.HttpStatus;
+//import org.springframework.http.ResponseEntity;
+//import org.springframework.web.bind.MethodArgumentNotValidException;
+//import org.springframework.web.bind.annotation.ControllerAdvice;
+//import org.springframework.web.bind.annotation.ExceptionHandler;
+//
+//import java.sql.SQLException;
+//
+//@ControllerAdvice
+//public class ControllerAdvisor {
 //    @ExceptionHandler(ProductNotFoundException.class)
 //    ResponseEntity<String>handleProductNotFound(ProductNotFoundException productNotFoundException){
 //        return new ResponseEntity<>(productNotFoundException.getMessage(),HttpStatus.NOT_FOUND);
@@ -47,12 +49,12 @@ public class ControllerAdvisor {
 //    ResponseEntity<String> methodArgumentNotValid(MethodArgumentNotValidException methodArgumentNotValidException){
 //        StringBuilder sb = new StringBuilder();
 //        methodArgumentNotValidException.getFieldErrors().forEach(err-> sb.append(err.getDefaultMessage()).append("\n"));
-//        return new ResponseEntity<>(sb.toString(), HttpStatus.valueOf(406));
+//        return new ResponseEntity<>(sb.toString(),HttpStatus.valueOf(406));
 //    }
 //
 //    @ExceptionHandler(SQLException.class)
 //    ResponseEntity<String> HsqlDb(SQLException hsqlException){
 //        return new ResponseEntity<>(hsqlException.getMessage(),HttpStatus.BAD_REQUEST);
 //    }
-
-}
+//
+//}

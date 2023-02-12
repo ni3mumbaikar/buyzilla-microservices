@@ -43,4 +43,10 @@ public class CustomersController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    @GetMapping("/{cid}")
+    ResponseEntity<Customer> findCustomerByEmail(@PathVariable String email){
+        return new ResponseEntity<>(customerService.findByEmail(email),HttpStatus.OK);
+    }
+
+
 }

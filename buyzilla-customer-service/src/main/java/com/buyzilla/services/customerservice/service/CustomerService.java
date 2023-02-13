@@ -62,4 +62,9 @@ public class CustomerService {
     public Customer findByEmail(String email) {
         return customerRepository.findByEmail(email);
     }
+
+    public Customer findCustomerById(Integer cid) {
+        return customerRepository.findById(cid).orElseThrow(()-> new UserNotFoundException(environment.getProperty("customer_not_found")));
+    }
 }
+
